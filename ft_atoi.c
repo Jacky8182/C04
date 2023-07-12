@@ -5,6 +5,7 @@ int ft_atoi(char *str)
     int signe;
 
     i = 0;
+    n = 0;
     signe = 1;
     while (str[i] && str[i] >= 9 && str[i] <= 13 || str[i] == 32)
     {
@@ -25,3 +26,11 @@ int ft_atoi(char *str)
     }
     return (n * signe);   
 }
+
+#include <stdio.h>
+
+int main()
+{
+    char str[] = "  ++-++++-+++++-1324ytrgr522";
+    printf ("%d", ft_atoi(str));
+
